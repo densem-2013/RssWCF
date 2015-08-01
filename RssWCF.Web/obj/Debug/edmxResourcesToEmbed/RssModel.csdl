@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RssModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RssEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Feeds" EntityType="RssModel.Feeds" />
+    <EntitySet Name="News" EntityType="RssModel.News" />
+    <AssociationSet Name="FK_News_Feeds" Association="RssModel.FK_News_Feeds">
+      <End Role="Feeds" EntitySet="Feeds" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Feeds">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="true" />
+    <Property Name="LastTimeUpdate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="News" Relationship="RssModel.FK_News_Feeds" FromRole="Feeds" ToRole="News" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FeedId" Type="Guid" Nullable="false" />
+    <Property Name="SourceLink" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Feeds" Relationship="RssModel.FK_News_Feeds" FromRole="News" ToRole="Feeds" />
+  </EntityType>
+  <Association Name="FK_News_Feeds">
+    <End Role="Feeds" Type="RssModel.Feeds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="News" Type="RssModel.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Feeds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="FeedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

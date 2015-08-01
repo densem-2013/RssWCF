@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RssModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RssModelStoreContainer">
+    <EntitySet Name="Feeds" EntityType="RssModel.Store.Feeds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="News" EntityType="RssModel.Store.News" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_News_Feeds" Association="RssModel.Store.FK_News_Feeds">
+      <End Role="Feeds" EntitySet="Feeds" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Feeds">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="URL" Type="nchar" Nullable="false" MaxLength="200" />
+    <Property Name="LastTimeUpdate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FeedId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SourceLink" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_News_Feeds">
+    <End Role="Feeds" Type="RssModel.Store.Feeds" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="News" Type="RssModel.Store.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Feeds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="FeedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

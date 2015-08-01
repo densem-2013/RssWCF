@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RssModelStoreContainer" CdmEntityContainer="RssEntities">
+    <EntitySetMapping Name="Feeds">
+      <EntityTypeMapping TypeName="RssModel.Feeds">
+        <MappingFragment StoreEntitySet="Feeds">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="LastTimeUpdate" ColumnName="LastTimeUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="RssModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="FeedId" ColumnName="FeedId" />
+          <ScalarProperty Name="SourceLink" ColumnName="SourceLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

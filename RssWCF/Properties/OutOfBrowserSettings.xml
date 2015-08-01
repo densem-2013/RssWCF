@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="Приложение RssWCFClient" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>Приложение RssWCFClient на рабочем столе: дома, на работе, в пути.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Приложение RssWCFClient" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

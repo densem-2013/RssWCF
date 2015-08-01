@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9a2ca75a-770b-489f-8118-529837a58cea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1347/RssService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RssService5.xsd" MetadataType="Schema" ID="b99e5f37-7661-43c6-b38b-5ad469ffee47" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RssService51.xsd" MetadataType="Schema" ID="7e82df0b-3c05-4fd9-b0b2-bb10f514f66d" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RssService52.xsd" MetadataType="Schema" ID="e7431e5e-f511-4a89-967e-0d4b0ee70724" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RssService2.wsdl" MetadataType="Wsdl" ID="fd5b61a7-d79d-4911-96f9-5cb78d2e074f" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?wsdl" />
+    <MetadataFile FileName="RssService53.xsd" MetadataType="Schema" ID="24c1e660-e56c-4f10-b478-09aac24ca6bb" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RssService1.disco" MetadataType="Disco" ID="9e4b7a87-4c0f-4432-b780-90ad227649e9" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?disco" />
+    <MetadataFile FileName="RssService54.xsd" MetadataType="Schema" ID="e55526ab-bf4e-477b-a9ca-ffcccef1aa3b" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RssService21.wsdl" MetadataType="Wsdl" ID="abc2593e-c4de-4170-a51b-7a580912ac6a" SourceId="1" SourceUrl="http://localhost:1347/RssService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

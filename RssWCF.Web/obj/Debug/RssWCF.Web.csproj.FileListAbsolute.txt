@@ -1,0 +1,12 @@
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\bin\RssWCF.Web.dll
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\bin\RssWCF.Web.pdb
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\bin\System.Windows.dll
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\bin\System.Windows.xml
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\obj\Debug\RssWCF.Web.dll
+C:\Documents and Settings\User\Мои документы\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\obj\Debug\RssWCF.Web.pdb
+C:\Users\Den_and_Anna\Documents\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\bin\RssWCF.Web.dll
+C:\Users\Den_and_Anna\Documents\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\bin\RssWCF.Web.pdb
+C:\Users\Den_and_Anna\Documents\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\obj\Debug\RssWCF.Web.dll
+C:\Users\Den_and_Anna\Documents\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\obj\Debug\RssWCF.Web.pdb
+C:\Users\Den_and_Anna\Documents\Visual Studio 2010\Projects\Silverlight\RssWCF\RssWCF.Web\obj\Debug\RssWCF.Web.csprojResolveAssemblyReference.cache

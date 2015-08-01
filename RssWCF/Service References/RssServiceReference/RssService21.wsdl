@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RssWCF.Web" />
+      <xsd:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRssService_GetFeeds_InputMessage">
+    <wsdl:part name="parameters" element="GetFeeds" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_GetFeeds_OutputMessage">
+    <wsdl:part name="parameters" element="GetFeedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_GetFeeds_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q1:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_AddFeed_InputMessage">
+    <wsdl:part name="parameters" element="AddFeed" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_AddFeed_OutputMessage">
+    <wsdl:part name="parameters" element="AddFeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_AddFeed_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q2:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveFeed_InputMessage">
+    <wsdl:part name="parameters" element="RemoveFeed" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveFeed_OutputMessage">
+    <wsdl:part name="parameters" element="RemoveFeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveFeed_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q3:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_FetchAllFeedNews_InputMessage">
+    <wsdl:part name="parameters" element="FetchAllFeedNews" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_FetchAllFeedNews_OutputMessage">
+    <wsdl:part name="parameters" element="FetchAllFeedNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_FetchAllFeedNews_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q4:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_GetNews_InputMessage">
+    <wsdl:part name="parameters" element="GetNews" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_GetNews_OutputMessage">
+    <wsdl:part name="parameters" element="GetNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_GetNews_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q5:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveNews_InputMessage">
+    <wsdl:part name="parameters" element="RemoveNews" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveNews_OutputMessage">
+    <wsdl:part name="parameters" element="RemoveNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveNews_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q6:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveAllNews_InputMessage">
+    <wsdl:part name="parameters" element="RemoveAllNews" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveAllNews_OutputMessage">
+    <wsdl:part name="parameters" element="RemoveAllNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRssService_RemoveAllNews_DBRequestFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/RssWCF.Web" name="detail" element="q7:DBRequestFault" />
+  </wsdl:message>
+  <wsdl:portType name="IRssService">
+    <wsdl:operation name="GetFeeds">
+      <wsdl:input wsaw:Action="urn:IRssService/GetFeeds" message="IRssService_GetFeeds_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/GetFeedsResponse" message="IRssService_GetFeeds_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/GetFeedsDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_GetFeeds_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFeed">
+      <wsdl:input wsaw:Action="urn:IRssService/AddFeed" message="IRssService_AddFeed_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/AddFeedResponse" message="IRssService_AddFeed_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/AddFeedDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_AddFeed_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFeed">
+      <wsdl:input wsaw:Action="urn:IRssService/RemoveFeed" message="IRssService_RemoveFeed_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/RemoveFeedResponse" message="IRssService_RemoveFeed_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/RemoveFeedDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_RemoveFeed_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllFeedNews">
+      <wsdl:input wsaw:Action="urn:IRssService/FetchAllFeedNews" message="IRssService_FetchAllFeedNews_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/FetchAllFeedNewsResponse" message="IRssService_FetchAllFeedNews_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/FetchAllFeedNewsDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_FetchAllFeedNews_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input wsaw:Action="urn:IRssService/GetNews" message="IRssService_GetNews_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/GetNewsResponse" message="IRssService_GetNews_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/GetNewsDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_GetNews_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveNews">
+      <wsdl:input wsaw:Action="urn:IRssService/RemoveNews" message="IRssService_RemoveNews_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/RemoveNewsResponse" message="IRssService_RemoveNews_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/RemoveNewsDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_RemoveNews_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllNews">
+      <wsdl:input wsaw:Action="urn:IRssService/RemoveAllNews" message="IRssService_RemoveAllNews_InputMessage" />
+      <wsdl:output wsaw:Action="urn:IRssService/RemoveAllNewsResponse" message="IRssService_RemoveAllNews_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:IRssService/RemoveAllNewsDBRequestFaultFault" name="DBRequestFaultFault" message="IRssService_RemoveAllNews_DBRequestFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

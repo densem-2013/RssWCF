@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/RssWCF.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RssWCF.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:1347/RssService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfFeed">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Feed" nillable="true" type="tns:Feed" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeed" nillable="true" type="tns:ArrayOfFeed" />
+  <xs:complexType name="Feed">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="ser:guid" />
+          <xs:element minOccurs="0" name="LastTimeUpdate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="News" nillable="true" type="tns:ArrayOfNews" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Feed" nillable="true" type="tns:Feed" />
+  <xs:complexType name="ArrayOfNews">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="News" nillable="true" type="tns:News" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNews" nillable="true" type="tns:ArrayOfNews" />
+  <xs:complexType name="News">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FeedId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Feeds" nillable="true" type="tns:Feed" />
+          <xs:element minOccurs="0" name="FeedsReference" nillable="true" type="q2:EntityReferenceOfFeedhtKmpHOL" />
+          <xs:element minOccurs="0" name="ID" type="ser:guid" />
+          <xs:element minOccurs="0" name="SourceLink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="News" nillable="true" type="tns:News" />
+  <xs:complexType name="DBRequestFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaultMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DBRequestFault" nillable="true" type="tns:DBRequestFault" />
+</xs:schema>

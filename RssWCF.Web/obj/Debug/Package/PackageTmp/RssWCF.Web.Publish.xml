@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost:5001/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Профиль1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/RssWCF.Web.pdb" publishTime="05/19/2015 22:29:06" />
+    <file relUrl="ClientBin/RssWCF.xap" publishTime="05/19/2015 22:28:40" />
+    <file relUrl="RssService.svc.cs" publishTime="05/19/2015 21:00:22" />
+    <file relUrl="RssWCF.Web.Publish.xml" publishTime="05/19/2015 22:33:12" />
+    <file relUrl="IRssService.cs" publishTime="05/05/2015 18:31:28" />
+    <file relUrl="RssModel.Designer.cs" publishTime="04/21/2015 14:11:44" />
+    <file relUrl="bin/RssWCF.Web.dll" publishTime="05/19/2015 22:29:06" />
+    <file relUrl="RssWCF.Web.csproj" publishTime="05/19/2015 22:28:39" />
+    <file relUrl="Web.Debug.config" publishTime="04/16/2015 13:30:30" />
+    <file relUrl="App_Data/RSSAgregatorDB.mdf" publishTime="05/19/2015 22:19:39" />
+    <file relUrl="clientaccesspolicy.xml" publishTime="04/21/2015 18:13:36" />
+    <file relUrl="RssWCF.Web.csproj.user" publishTime="05/19/2015 22:28:39" />
+    <file relUrl="RssModel.edmx" publishTime="04/21/2015 14:11:06" />
+    <file relUrl="CrossDomain.xml" publishTime="04/30/2015 09:18:12" />
+    <file relUrl="RssService.svc" publishTime="04/21/2015 14:37:12" />
+    <file relUrl="RssWCFTestPage.aspx" publishTime="05/19/2015 21:03:01" />
+    <file relUrl="Web.Release.config" publishTime="04/16/2015 13:30:30" />
+    <file relUrl="App_Data/RSSAgregatorDB_log.ldf" publishTime="05/19/2015 22:19:39" />
+    <file relUrl="Web.config" publishTime="05/19/2015 22:36:50" />
+    <file relUrl="Silverlight.js" publishTime="04/16/2015 13:30:30" />
+    <file relUrl="RssWCFTestPage.html" publishTime="04/16/2015 13:30:30" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="04/16/2015 13:30:30" />
+    <file relUrl="SilverlightFaultBehavior.cs" publishTime="04/21/2015 13:38:00" />
+  </publishProfile>
+</publishData>
